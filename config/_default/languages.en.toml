@@ -1,0 +1,24 @@
+languageCode = "en"
+languageName = "English"
+displayName = "EN"
+isoCode = "en"
+weight = 1
+rtl = false
+
+title = "François Bertet"
+description = "Personal website of François Bertet. Backend Engineer / DevOps at Qorvo, Inc."
+dateFormat = "2 January 2006"
+
+[params]
+  # mainSections = ["section1", "section2"]
+
+[author]
+   name = "François Bertet"
+   image = "img/author.jpg"
+   headline = "Backend Engineer / DevOps at Qorvo, Inc."
+   bio = "Backend Engineer / DevOps at Qorvo, Inc."
+   links = [
+     { github = "https://github.com/fbertet" },
+     { linkedin = "https://linkedin.com/in/fbertet" },
+     { email = "mailto:fr.bertet@gmail.com" }
+   ]
