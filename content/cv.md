@@ -1,7 +1,7 @@
 ---
 description: François Bertet CV
 title: Curriculum Vitae
-date: 2023-03-31
+date: 2025-11-17
 showTableOfContents: true
 showDate: false
 showAuthor: false
@@ -15,9 +15,8 @@ showPagination: false
 
 ## 🚀 Summary
 
-My name is François, I am a 28 years old guy living near Paris in France 🇫🇷.
-
-I am currently working as a Backend Engineer / DevOps at Qorvo, an american semiconductor company specialized in radio-frequency systems.
+My name is François, I am a 31 years old guy living near Paris in France 🇫🇷.
+I am currently open for DevOps missions as a freelance after 5+ years passed as a Senior DevOps Engineer at Qorvo, an american semiconductor company specialized in radio-frequency systems.
 
 
 ## 👨‍🎓 Education
@@ -30,7 +29,7 @@ I am currently working as a Backend Engineer / DevOps at Qorvo, an american semi
 ## 📕 Technical skills & languages
 
 - **DevOps**: AWS, Docker, Kubernetes, Terraform, SaltStack, Packer, Gitlab
-- **Programming:** Python, Java, C, C++, Lua, OCaml, LaTeX
+- **Programming:** Python, Java, C, C++, Lua, LaTeX
 - **Database:** PostgreSQL / MySQL, DynamoDB, ElasticSearch
 - **Concepts:** GitOPS, Agile Scrum & SAFe
 - **Languages:** French, English
@@ -38,7 +37,7 @@ I am currently working as a Backend Engineer / DevOps at Qorvo, an american semi
 
 ## 👨‍💻 Work Experience
 
-- [2020 -- Present] **Senior Backend Engineer / DevOps** -- [Qorvo](https://www.qorvo.com/) -- *Paris, France*
+- [2020 -- 2025] **Senior Backend Engineer / DevOps** -- [Qorvo](https://www.qorvo.com/) -- *Paris, France*
     - Conception and implementation of optimized and parallelized CI/CD pipelines on Gitlab.
     - Configuration of replicable hardware servers for QA Team using SaltStack and Docker among other tools.
     - Automation of Product Team release process and its integration to CI/CD pipelines.
@@ -69,4 +68,4 @@ See more about my personal projects in the [projects dedicated section](/project
 
 ## 🧗‍♂️ Points of Interest
 
-- **Hobbies:** Climbing, 3D Printing, Development, Video games
+- **Hobbies:** Bodybuilding, Climbing, 3D Printing, Development, Woodworking, Watchmaking
