@@ -95,4 +95,6 @@ Some hours of painting and a few mililitres of glue later and voila!
 
 The remaining step is to enjoy old video games while BMO is smiling at us 😄
 
+![Playing on recalbox](recalbox.jpg "Playing on Recalbox")
+
 All the parts of this project can be found on my Github: [FIXME]
