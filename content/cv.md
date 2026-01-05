@@ -1,7 +1,7 @@
 ---
 description: François Bertet CV
 title: Curriculum Vitae
-date: 2025-11-17
+date: 2025-12-18
 showTableOfContents: true
 showDate: false
 showAuthor: false
@@ -15,8 +15,14 @@ showPagination: false
 
 ## 🚀 Summary
 
-My name is François, I am a 31 years old guy living near Paris in France 🇫🇷.
-I am currently open for DevOps missions as a freelance after 5+ years passed as a Senior DevOps Engineer at Qorvo, an american semiconductor company specialized in radio-frequency systems.
+
+My name is **François**, I am a 31 years old guy living near Paris in France 🇫🇷.
+
+After completing a master's degree in computer science at **EPITA** in 2017, I joined **Sevenhugs**, a ~20-person startup specializing in IoT.
+We grew to ~60 people before being acquired in 2020 by **Qorvo**, an american semiconductor company.
+I worked there as a **Senior DevOps Engineer**.
+
+After a sabbatical year that allowed me to complete [personal projects](/projects), I am now **available** for **freelance DevOps** assignments :-)
 
 
 ## 👨‍🎓 Education
@@ -68,4 +74,4 @@ See more about my personal projects in the [projects dedicated section](/project
 
 ## 🧗‍♂️ Points of Interest
 
-- **Hobbies:** Bodybuilding, Climbing, 3D Printing, Development, Woodworking, Watchmaking
+- **Hobbies:** Bodybuilding / Calisthenics, Climbing, 3D Printing, Home automation, Development, Video games
