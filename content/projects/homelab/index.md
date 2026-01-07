@@ -1,7 +1,7 @@
 ---
 title: Homelab
 date: 2023-03-31
-weight: 10
+weight: 20
 tags: [3D-printing, 3D-modeling, homelab, kubernetes, home-automation, network]
 ---
 

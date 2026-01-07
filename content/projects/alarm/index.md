@@ -1,7 +1,7 @@
 ---
 title: Alarm panel
-date: 2025-08-01
-weight: 12
+date: 2025-09-01
+weight: 10
 
 tags: [home-automation, electronic, esphome]
 ---

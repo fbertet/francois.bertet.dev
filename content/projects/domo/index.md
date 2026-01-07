@@ -1,14 +1,14 @@
 ---
 title: Domo
 date: 2021-11-11
-weight: 20
+weight: 15
 tags: [home-automation, docker, esp32]
 ---
 
 <img style="float: right;width:10%" src="domo_icon.png">
 
 {{< lead >}}
-Home automation using Home Assistant, an open source solution without Cloud dependencies.
+Advanced home automation using Home Assistant, an open source solution without Cloud dependencies.
 {{< /lead >}}
 
 
