@@ -11,10 +11,6 @@ tags: [3D-printing, 3D-modeling, homelab, kubernetes, home-automation, network]
 A Homelab made of 4 3D-Printed Mini racks running Kubernetes, TrueNas and pfSense.
 {{< /lead >}}
 
-{{< alert "circle-info" >}}
-This project is still a Work in progress.
-{{< /alert >}}
-
 
 ## Project Genesis
 
@@ -58,6 +54,9 @@ Without forgetting a [Noctua NF-A9x14 fan](https://www.amazon.fr/Noctua-NF-A9x14
 
 As you may see, each Raspberry Pi enclosure also includes a colored power button and a [1" OLED screen](https://fr.aliexpress.com/item/32638662748.html) on the front to display information about CPU usage, RAM usage, etc.
 
+{{< alert "circle-info" >}}
+**EDIT (2025-02-01):** These Raspberry Pi have since been replaced by 3x N100 mini computers allowing numerous improvements. See my [article about this](/projects/homelab_refactoring) for more information.
+{{< /alert >}}
 
 ### Software side
 
@@ -135,8 +134,3 @@ From top to bottom, S01 mini-rack is composed of:
 This rack act as a 14TB NAS using TrueNas CORE.
 
 It is used to store data but also to store Kubernetes volumes backups.
-
-
-## About 3D Printing
-
-More to come...
