@@ -16,7 +16,7 @@ A Homelab made of 4 3D-Printed Mini racks running Kubernetes, TrueNas and pfSens
 
 At the beginning, my Homelab was composed of a single Raspberry Pi 3.
 
-Its purpose was mainly to run *Home Assistant*, *Deconz* and *Pi-hole* docker containers as part of [DOMO](/projects/domo) project. Someday, my Home automation stopped working. After a quick investigation I understood that the Raspberry Pi micro-SD card died.
+Its purpose was mainly to run *Home Assistant*, *Deconz* and *Pi-hole* docker containers as part of [DOMO](/projects/domo) project. One day, my Home automation stopped working. After a quick investigation I understood that the Raspberry Pi micro-SD card had sadly died.
 
 It would have been easy to replicate it since everything was dockerized / on github but this misadventure was the perfect excuse to build an almost prod-ready infrastructure based on Kubernetes (who said overkill?).
 
@@ -30,8 +30,8 @@ This project allowed me to mix several hobbies of mine:
 * Home automation
 * Some basic electronic
 
-Mini racks are made up of a structure divided into units (1.5cm high) capable of accommodating rack mounted stuff, exactly like datacenter conventional racks.
-It is made this way so it's easy to individually replace parts in the event of failure.
+The Mini racks are structures divided into units (1.5cm high) capable of accommodating rack mounted stuff, exactly like datacenter conventional racks.
+They are made this way so it's easy to individually replace parts in the event of failure.
 
 This "mini data center" is composed of 3 types of rack: Compute / Network / Storage.
 
@@ -60,11 +60,11 @@ As you may see, each Raspberry Pi enclosure also includes a colored power button
 
 ### Software side
 
-On software side, these 8 Raspberry Pi form a Kubernetes (K3S) cluster.
+On the software side, these 8 Raspberry Pi form a Kubernetes (K3S) cluster.
 
 Their configuration is done using multiple tools:
-* [Packer](https://www.packer.io/): To build a ready to use Raspberry Pi OS image that includes SaltStack,
-* [SaltStack](https://saltproject.io/) (Ansible equivalent): To configure users, setup screen, install K3S, deploy Kubernetes system resources like ArgoCD etc,
+* [Packer](https://www.packer.io/): To build a ready-to-use Raspberry Pi OS image that includes SaltStack,
+* [SaltStack](https://saltproject.io/) (Ansible equivalent): To configure users, setup the screen, install K3S, deploy Kubernetes system resources like ArgoCD etc,
 * [ArgoCD](https://argo-cd.readthedocs.io/en/stable/): To automatically deploy applications on Kubernetes based on Git repositories.
 
 All of that is stored in Git repositories following GitOps methodology.
@@ -74,12 +74,12 @@ This setup is almost production ready with:
 * Load Balancing between nodes using [MetalLB](https://metallb.universe.tf/)
 * Distributed and redundant persistent storage based on [Longhorn](https://longhorn.io/),
 * Monitoring, logging and alerting using Prometheus and Grafana,
-* Backups perfomed on Storage mini rack every night,
+* Backups perfomed in the Storage mini rack every night,
 * Servers plugged on a UPS monitored with [nut](https://networkupstools.org/)
 
 ![Dashy dashboard](dashy.png "Dashy Dashboard")
 
-On application side, these mini racks are used to run Home Assistant and Deconz of course but also *arr suite (Bazarr, Sonarr, Radarr, Prowlarr), Plex, Pihole, Gitlab, ... locally served but still accessible from outside through Wireguard VPN.
+On the application side, these mini racks are used to run Home Assistant and Deconz of course but also *arr suite (Bazarr, Sonarr, Radarr, Prowlarr), Plex, Pihole, Gitlab, ... locally served but still accessible from outside through Wireguard VPN.
 
 
 ## Network mini rack - N01
@@ -101,7 +101,7 @@ From top to bottom, N01 mini-rack is composed of:
 
 ### Software side
 
-The Mini PC Odyssey X86J4125864 act as a router running pfSense.
+The Mini PC Odyssey X86J4125864 acts as a router running pfSense.
 
 This setup allowed me to:
 * Replace the need of the ISP router using the TPLink Fiber to ethernet converter,
@@ -131,6 +131,6 @@ From top to bottom, S01 mini-rack is composed of:
 
 ![Truenas dashboard](truenas.png "Truenas Dashboard")
 
-This rack act as a 14TB NAS using TrueNas CORE.
+This rack acts as a 14TB NAS using TrueNas CORE.
 
 It is used to store data but also to store Kubernetes volumes backups.
