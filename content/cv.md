@@ -15,9 +15,9 @@ showPagination: false
 ## 🚀 Summary
 
 
-My name is **François**, I am a 31 years old guy living near Paris in France 🇫🇷.
+<img class="mb-2 rounded-full h-15 w-15" style="float: right; margin-right: 15px; width:15%" src="/img/author_hu02aa61ae1d9de35cbe238d2676170cb9_29438_288x288_fill_q75_box_center.jpg">
 
-After completing a master's degree in computer science at **EPITA** in 2017, I joined **Sevenhugs**, a ~20-person startup specializing in IoT.
+My name is **François BERTET**, I am a 31 years old guy living near Paris in France 🇫🇷. After completing a master's degree in computer science at **EPITA** in 2017, I joined **Sevenhugs**, a ~20-person startup specializing in IoT.
 We grew to ~60 people before being acquired in 2020 by **Qorvo**, an american semiconductor company.
 I worked there as a **Senior DevOps Engineer**.
 
