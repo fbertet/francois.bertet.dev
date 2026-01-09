@@ -9,9 +9,8 @@ showReadingTime: false
 showPagination: false
 ---
 
-{{< button href="/cv.pdf" target="_self" >}}Download PDF{{< /button >}}
-
-<br>
+{{< button href="/cv_en.pdf" target="_self" >}}Download PDF ( 🇬🇧 ){{< /button >}}
+{{< button href="/cv_fr.pdf" target="_self" >}}Download PDF ( 🇫🇷 ){{< /button >}}
 
 ## 🚀 Summary
 
@@ -43,7 +42,7 @@ After a sabbatical year that allowed me to complete [personal projects](/project
 
 ## 👨‍💻 Work Experience
 
-- [2020 -- 2025] **Senior Backend Engineer / DevOps** -- [Qorvo](https://www.qorvo.com/) -- *Paris, France*
+- [2020 -- 2024] **Senior Backend Engineer / DevOps** -- [Qorvo](https://www.qorvo.com/) -- *Paris, France*
     - Conception and implementation of optimized and parallelized CI/CD pipelines on Gitlab.
     - Configuration of replicable hardware servers for QA Team using SaltStack and Docker among other tools.
     - Automation of Product Team release process and its integration to CI/CD pipelines.
