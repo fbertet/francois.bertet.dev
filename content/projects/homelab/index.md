@@ -174,5 +174,5 @@ It is used to store data but also to store Kubernetes volumes backups. In fact, 
 This homelab started as a small personal project and gradually grew into a modular, multi-node setup. It allowed me to **learn new DevOps practices** and **experiment** with the same tools and principles I use in professional environments: GitOps, Kubernetes, network segmentation, monitoring, backups, reproducibility. etc.
 
 {{< alert "circle-info" >}}
-**EDIT (2026-01-01):** During my one-year break, this project became my main playground to experiment, learn and break things. I used that time to refactor it and make multiple improvements, see my [Homelab refactoring article](/projects/homelab_refactoring).
+**Update (2026-01-01):** During my one-year break, this project became my main playground to experiment, learn and break things. I used that time to refactor it and make multiple improvements, see my [Homelab refactoring article](/projects/homelab_refactoring).
 {{< /alert >}}
