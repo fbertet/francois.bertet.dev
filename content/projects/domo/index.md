@@ -2,7 +2,7 @@
 title: Domo
 date: 2021-11-11
 weight: 15
-tags: [home-automation, docker, esp32]
+tags: [home-automation, docker, esphome]
 ---
 
 <img style="float: right;width:10%" src="domo_icon.png">

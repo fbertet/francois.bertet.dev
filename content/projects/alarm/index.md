@@ -3,7 +3,7 @@ title: Alarm panel
 date: 2025-09-01
 weight: 10
 
-tags: [home-automation, electronics, esphome]
+tags: [home-automation, electronics, 3D-modeling, 3D-printing, esphome]
 ---
 
 <img style="float: right;width:10%" src="alarm_icon.png">
