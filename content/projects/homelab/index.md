@@ -19,7 +19,7 @@ At the beginning, my Homelab was composed of a single Raspberry Pi 3.
 Its purpose was mainly to run *Home Assistant*, *Deconz* and *Pi-hole* Docker containers as part of [DOMO](/projects/domo) project. One day, my Home automation stopped working. After a quick investigation I understood that the Raspberry Pi microSD card had sadly died.
 
 It would have been easy to rebuild it, since everything was already Dockerized and stored in Git. But I had just completed a [Kubernetes training course with Enix](https://enix.io/fr/formation-kubernetes/) and this failure highlighted the weaknesses of my setup: no redundancy, no monitoring, no backups.
-So instead of rebuilding the same thing, I decided to design something closer to production infrastructure based on **Kubernetes** (Who said overkill? :smile:).
+So instead of rebuilding the same thing, I decided to design something closer to a production infrastructure based on **Kubernetes** (Who said overkill? :smile:).
 
 Almost two years later, here we are:
 
@@ -59,7 +59,7 @@ As you may see, each Raspberry Pi enclosure also includes a colored power button
 One may ask why Raspberry Pis instead of "real" servers, there were several reasons:
 - I already had some Raspberry Pis and they were cheap (before COVID-19),
 - Their power consumption is low,
-- It's more fun to run an orchestrator on multiple nodes to see the load distributed across them.
+- It's more fun to run an orchestrator on multiple nodes to see the load distributed across them,
 - Having 8 nodes to manage forced me to automate the configuration, doing everything manually would have taken too long 😄
 
 {{< alert "circle-info" >}}
@@ -71,7 +71,7 @@ One may ask why Raspberry Pis instead of "real" servers, there were several reas
 On the software side, these 8 Raspberry Pis form a Kubernetes cluster. In terms of Kubernetes distribution, I chose [K3S](https://k3s.io/), a lightweight distribution that is built for Edge computing and optimized for ARM.
 
 The Raspberry Pis are configured using multiple tools:
-* [Packer](https://www.packer.io/): To build reproducible ready-to-use Raspberry Pi OS image that includes SaltStack,
+* [Packer](https://www.packer.io/): To build reproducible ready-to-use Raspberry Pi OS images that include SaltStack,
 * [SaltStack](https://saltproject.io/) (Ansible equivalent): To configure users, setup the screen, install K3S, deploy Kubernetes system resources like ArgoCD, etc,
 * [ArgoCD](https://argo-cd.readthedocs.io/en/stable/): To automatically deploy and manage applications on Kubernetes via GitOps.
 
@@ -79,7 +79,7 @@ The related configuration files are stored in dedicated Git repositories followi
 
 This setup is designed like a **small production cluster** with:
 * 3 control-plane nodes (high availability for etcd and API server),
-* Load Balancing between nodes using [MetalLB](https://metallb.universe.tf/)
+* Load Balancing between nodes using [MetalLB](https://metallb.universe.tf/),
 * Distributed & persistent storage on SSDs with [Longhorn](https://longhorn.io/) (iSCSI-based block storage),
 * Monitoring, logging and alerting using Prometheus and Grafana,
 * Nightly backups of the Longhorn volumes exported to the Storage mini rack,
@@ -109,7 +109,7 @@ From top to bottom, N01 mini-rack is composed of:
 
 #### Why Odyssey X86J4125864?
 
-First things first, I wanted to use pfSense which is not ARM compatible so Raspberry Pi wasn't an option so I needed an x86 architecture PC but wanted to keep:
+First things first, I wanted to use pfSense which is not ARM compatible so Raspberry Pi wasn't an option which meant that I needed an x86 architecture PC but wanted to keep:
 - **Low power consumption**,
 - A **limited footprint** to fit it in a 5" mini rack,
 - **GPIO pins** to control devices like external displays or sensors via I2C, SPI, etc.
@@ -166,7 +166,7 @@ From top to bottom, S01 mini-rack is composed of:
 
 This rack acts as a NAS running **TrueNAS CORE** with **14TB usable capacity** (RAIDZ1).
 
-It is used to store data but also to store Kubernetes volumes backups. In fact, Longhorn replicates volumes across the SSDs in the compute nodes, but those volumes are also backed up nightly to TrueNAS. This gives both **high availability** and **disaster recovery**.
+It is used to store data but also to store Kubernetes volumes' backups. In fact, Longhorn replicates volumes across the SSDs in the compute nodes, but those volumes are also backed up nightly to TrueNAS. This gives both **high availability** and **disaster recovery**.
 
 
 ### Conclusion
