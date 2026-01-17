@@ -204,4 +204,5 @@ In addition to activating / deactivating the alarm, a set of Home Assistant auto
 
 Special thanks to Valeria, who helped me on that project! 😉
 
-As usual, all the parts of this project will be published on my GitHub.
+**Want to dig deeper or build your own?** <br >
+You’ll find the full project on my GitHub: https://github.com/fbertet/alarm-panel {{< icon "github" >}}
