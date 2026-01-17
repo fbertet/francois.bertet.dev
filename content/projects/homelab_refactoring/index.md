@@ -20,7 +20,8 @@ This project is still a Work in progress.
 
 After running my homelab for quite some time on Raspberry Pis (See [previous article](/projects/homelab)), the setup was stable and functional. However, as new needs emerged, the platform started to show some limitations.
 
-This article focuses on the major improvements, on both the hardware and software sides:
+
+This article focuses on the major improvements, both regarding the hardware and the software:
 - Compute upgrade – Raspberry Pis → N100
 - Bare Metal → Virtualization using Proxmox
 - Kubernetes OS – Debian + K3S → Talos Linux
@@ -43,7 +44,7 @@ The Intel N100 is a recent low-power x86 CPU from Intel’s Alder Lake-N family 
 - Hardware virtualization support,
 - Hardware acceleration for video encoding (useful for running Plex).
 
-The icing on the cake is that the N100 mini computers aren't even more expensive than the Raspberry Pi when you include all the accessories (power supply, storage, cooling, case, etc.).
+The icing on the cake is that N100 mini computers aren't even more expensive than Raspberry Pis when you include all the accessories (power supply, storage, cooling, case, etc.).
 
 That additional compute power gave me the ability to run a hypervisor reliably and GitLab flawlessly.
 I also benefited from the x86_64 architecture since many Docker images are still not available or poorly supported on ARM.
@@ -67,11 +68,11 @@ Compared to its competitors (VMWare, Hyper-V, etc.), Proxmox VE is interesting f
 
 ![Proxmox web GUI](proxmox.png "Proxmox web GUI 🚀")
 
-In the end, it effectively functions as a private cloud, mimicking the behavior of AWS EC2 web GUI 🤗.
+In the end, it effectively works as a private cloud, mimicking the behavior of AWS EC2 web GUI 🤗.
 
 Proxmox VE cluster across the 3 N100 nodes currently runs 4 VMs:
 - 1x `gitlab` virtual machine under *Debian* OS running *GitLab + GitLab runner* Docker containers configured using OpenTofu + Ansible.
-- 3x `talos` virtual machines running *Talos Linux* OS (one per Proxmox node) that runs Kubernetes, configured using OpenTofu + Argo-CD (More info below).
+- 3x `talos` virtual machines running *Talos Linux* OS (one per Proxmox node) that runs Kubernetes, configured using OpenTofu + Argo-CD (More information below).
 
 
 ## Kubernetes OS - From Debian + K3S to Talos Linux
@@ -92,11 +93,11 @@ As mentioned above, all of that is configured using OpenTofu and automatically d
 One of the main goals of this upgrade was to push GitOps even further — not only for configuration & applications, but for the whole infrastructure.
 
 Almost everything is managed via configuration files and Infrastructure as Code deployed through CI/CD. The code is stored in a multitude of GitLab repositories:
-![GitOps](gitlab_repositories.png "Homelab related repositories at left, generic reusable tools repositories at right")
+![GitOps](gitlab_repositories.png "Homelab related repositories on the left, generic reusable tools repositories on the right")
 
 At first, my goal was to instantiate the VMs, set up the Kubernetes cluster and deploy every Kubernetes system component (networking, storage, ...) using OpenTofu. Then ArgoCD would have been used for the Kubernetes apps deployment only.
 
-**Problem:** This is a [known issue](https://github.com/hashicorp/terraform-provider-kubernetes/issues/1782) about the `depends_on` feature of Kubernetes and Helm OpenTofu providers that is not working as expected with `kubernetes_manifest` resource which is mandatory to use for CRDs kind of resources. The result was, despite explicit `depends_on` statements on the Proxmox and Talos resources that were responsible for creating the Kubernetes cluster, `tofu plan` gave errors about `kubernetes_manifests` resources because "the cluster does not exist"...
+**Problem:** This is a [known issue](https://github.com/hashicorp/terraform-provider-kubernetes/issues/1782) about the `depends_on` feature of Kubernetes and Helm OpenTofu providers that is not working as expected with the `kubernetes_manifest` resource which is mandatory to use for CRDs kind of resources. The result was, despite explicit `depends_on` statements on the Proxmox and Talos resources that were responsible for creating the Kubernetes cluster, `tofu plan` gave errors about `kubernetes_manifest` resources because "the cluster does not exist"...
 
 This is why I finally dropped this idea and decided to keep OpenTofu for the infrastructure part but to deploy every Kubernetes resource (both system components and apps) using ArgoCD. But how? In fact, ArgoCD itself needs system components which leads to a "chicken and egg" problem 🥚🐔.
 
@@ -136,7 +137,7 @@ It provides:
 
 Thanks to KitchenOwl, we now generate weekly shopping lists from meal plans in seconds, synced across phones. This simple app, running on the Kubernetes cluster, has turned grocery shopping from a painful chore into a much faster and more organized task.
 
-While not directly exposed on the internet, it is still accessible from anywhere (typically from the supermarket 😄) via the WireGuard VPN configured on pfSense (See more about the Network rack [here](/projects/homelab/#network-mini-rack---n01)).
+While not directly exposed to the internet, it is still accessible from anywhere (typically from the supermarket 😄) via the WireGuard VPN configured on pfSense (See more about the Network rack [here](/projects/homelab/#network-mini-rack---n01)).
 
 **Protip:** For not having to enable/disable the VPN manually on our iPhones, we set up a [shortcut](https://support.apple.com/guide/shortcuts/welcome/ios) that does it automatically based on the Wi-Fi network SSID we are connected to.
 
