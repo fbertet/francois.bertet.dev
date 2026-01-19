@@ -6,7 +6,7 @@ weight = 1
 rtl = false
 
 title = "François Bertet"
-description = "Personal website of François Bertet. Freelance Senior DevOps Engineer"
+description = "Personal website of François Bertet. Senior DevOps Engineer"
 dateFormat = "2 January 2006"
 
 [params]
@@ -15,8 +15,8 @@ dateFormat = "2 January 2006"
 [author]
    name = "François Bertet"
    image = "img/author.jpg"
-   headline = "Freelance Senior DevOps Engineer"
-   bio = "Freelance Senior DevOps Engineer"
+   headline = "Senior DevOps Engineer"
+   bio = "Senior DevOps Engineer"
    links = [
      { github = "https://github.com/fbertet" },
      { linkedin = "https://linkedin.com/in/fbertet" },

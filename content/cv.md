@@ -20,14 +20,7 @@ showPagination: false
 My name is **François BERTET**, I am a 31-year-old DevOps engineer living near Paris 🇫🇷. After completing a master's degree in computer science at **EPITA** in 2017, I joined **Sevenhugs**, a ~20-person startup specializing in IoT.
 We grew to ~60 people before being acquired in 2020 by **Qorvo**, an American semiconductor company, where I worked as a **Senior DevOps Engineer**.
 
-After a sabbatical year that allowed me to complete [personal projects](/projects), I am now **available** for **freelance DevOps** assignments :-)
-
-
-## 👨‍🎓 Education
-
-- [2012 -- 2017] **Master's degree in Computer Science** -- [EPITA](https://www.epita.fr/) -- *Kremlin-Bicêtre, France*
-  - Top of the GISTRE major ‑ Embedded and real‑time systems specialization.
-  - Study semester abroad at Griffith College Dublin, Ireland.
+After a sabbatical year that allowed me to complete [personal projects](/projects), I am now **open for work** as a **DevOps Engineer**  :-)
 
 
 ## 📕 Technical skills & languages
@@ -65,12 +58,19 @@ After a sabbatical year that allowed me to complete [personal projects](/project
   - Development of various mobile customer projects such as SportBooking, an Android application allowing users to register for tennis tournaments organized by ForestHill clubs.
 
 
+## 👨‍🎓 Education
+
+- [2012 -- 2017] **Master's degree in Computer Science** -- [EPITA](https://www.epita.fr/) -- *Kremlin-Bicêtre, France*
+  - Top of the GISTRE major ‑ Embedded and real‑time systems specialization.
+  - Study semester abroad at Griffith College Dublin, Ireland.
+
+
 ## 👨‍🎨 Personal Projects
 
-See more about my personal projects in the [dedicated projects section](/projects).
+See more about my personal projects in the [dedicated section](/projects).
 
 
 ## 🧗‍♂️ Points of Interest
 
-- **Sports:** Bodybuilding / Calisthenics, Climbing
+- **Sports:** Gym and Calisthenics, Climbing
 - **Hobbies:** 3D printing, Home automation, Development, Video games
