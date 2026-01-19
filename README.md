@@ -4,6 +4,7 @@
 [![Status](https://img.shields.io/uptimerobot/status/m802173803-cee45eb58af2526583346b90?label=Status)](https://stats.uptimerobot.com/eniLI7gU6f)
 [![30-day Uptime](https://img.shields.io/uptimerobot/ratio/m802173803-cee45eb58af2526583346b90?label=30-day%20Uptime)](https://stats.uptimerobot.com/eniLI7gU6f)
 [![GitHub License](https://img.shields.io/github/license/fbertet/francois.bertet.dev?label=License)](LICENSE)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 
 <p align="center">
   <img src="docs/preview.png" alt="Website preview" width="600">
