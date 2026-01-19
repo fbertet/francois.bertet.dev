@@ -10,4 +10,5 @@ cascade:
     showTaxonomies: true
 ---
 
-Some things that I'm proud of. For my other projects, check out my [GitHub profile](https://github.com/fbertet/) {{< icon "github" >}}.
+Some personal projects that I'm proud of :-) <br />
+For my other projects, check out my [GitHub profile](https://github.com/fbertet/) {{< icon "github" >}}.
