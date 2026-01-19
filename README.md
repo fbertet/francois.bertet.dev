@@ -1,9 +1,9 @@
 # francois.bertet.dev
 
-[![CI/CD pipeline](https://img.shields.io/github/actions/workflow/status/fbertet/francois.bertet.dev/.github%2Fworkflows%2Fhugo.yaml)](https://github.com/fbertet/francois.bertet.dev/deployments/github-pages)
+[![CI/CD pipeline](https://img.shields.io/github/actions/workflow/status/fbertet/francois.bertet.dev/.github%2Fworkflows%2Fhugo.yaml?label=CI%2FCD%20Pipeline)](https://github.com/fbertet/francois.bertet.dev/deployments/github-pages)
 [![Status](https://img.shields.io/uptimerobot/status/m802173803-cee45eb58af2526583346b90?label=Status)](https://stats.uptimerobot.com/eniLI7gU6f)
 [![30-day Uptime](https://img.shields.io/uptimerobot/ratio/m802173803-cee45eb58af2526583346b90?label=30-day%20Uptime)](https://stats.uptimerobot.com/eniLI7gU6f)
-[![GitHub License](https://img.shields.io/github/license/fbertet/francois.bertet.dev?label=License)](LICENSE)
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](LICENSE)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 
 <p align="center">
