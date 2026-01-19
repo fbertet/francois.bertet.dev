@@ -97,7 +97,7 @@ The remaining step is to enjoy old video games while BMO is smiling at us 😄
 
 ![Playing on Recalbox](recalbox.jpg "Playing on Recalbox")
 
-All the parts of this project can be found on my Github: [FIXME]
+All the parts of this project can be found on my Github: https://github.com/fbertet/bmo
 
 
 ## Conclusion
