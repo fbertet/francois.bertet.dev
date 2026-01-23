@@ -9,8 +9,8 @@ showReadingTime: false
 showPagination: false
 ---
 
-{{< button href="/cv_en.pdf" target="_self" >}}Download PDF ( 🇬🇧 ){{< /button >}}
-{{< button href="/cv_fr.pdf" target="_self" >}}Download PDF ( 🇫🇷 ){{< /button >}}
+{{< button href="https://cv-en.bertet.dev" target="_self" >}}Download PDF ( 🇬🇧 ){{< /button >}}
+{{< button href="https://cv-fr.bertet.dev" target="_self" >}}Download PDF ( 🇫🇷 ){{< /button >}}
 
 ## 🚀 Summary
 
