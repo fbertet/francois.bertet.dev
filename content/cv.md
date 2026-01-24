@@ -72,7 +72,7 @@ After a sabbatical year focused on learning and building things (See [/projects]
 See more about my personal projects in the [dedicated section](/projects).
 
 
-## 🧗‍♂️ Points of Interest
+## 🧗‍♂️ Interests
 
 - **Sports:** Gym and Calisthenics, Climbing
 - **Hobbies:** 3D printing, Home automation, Development, Video games
