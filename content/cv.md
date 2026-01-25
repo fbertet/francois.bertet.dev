@@ -23,7 +23,7 @@ We grew to ~60 people before being acquired in 2020 by **Qorvo**, an American se
 After a sabbatical year focused on learning and building things (See [/projects](/projects)), I am **currently available** for new opportunities as a **DevOps Engineer**.
 
 
-## 📕 Technical skills & languages
+## 📕 Skills
 
 - **DevOps**: AWS, Docker, Kubernetes, Terraform/OpenTofu, SaltStack, Ansible, Packer, GitLab CI
 - **Programming:** Python, Java, C, C++, Lua, LaTeX
