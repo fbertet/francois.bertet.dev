@@ -26,7 +26,7 @@ After a sabbatical year focused on learning and building things (See [/projects]
 ## 📕 Skills
 
 - **DevOps**: AWS, Docker, Kubernetes, Terraform/OpenTofu, SaltStack, Ansible, Packer, GitLab CI
-- **Programming:** Python, Java, C, C++, Lua, LaTeX
+- **Programming:** Python, Bash, Java, C, C++, Lua, LaTeX
 - **Databases:** PostgreSQL / MySQL, DynamoDB, Elasticsearch
 - **Concepts:** GitOps, Agile Scrum & SAFe
 - **Languages:** French, English
