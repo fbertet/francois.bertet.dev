@@ -35,14 +35,14 @@ After a sabbatical year focused on learning and building things (See [/projects]
 ## 👨‍💻 Work Experience
 
 - [2020 -- 2024] **Senior Backend Engineer / DevOps** -- [Qorvo](https://www.qorvo.com/) -- *Paris, France*
-  - Conception and implementation of optimized and parallelized CI/CD pipelines on GitLab.
-  - Configuration of reproducible hardware servers for QA team using SaltStack, Docker and other automation tools.
+  - Design and implementation of optimized and parallelized CI/CD pipelines on GitLab.
+  - Configuration of reproducible hardware test servers for QA team using SaltStack, Docker and other automation tools.
   - Deployment of a hybrid CI/CD infrastructure supporting 100+ developers, composed of bare‑metal servers, AWS EKS and OVH VMs in order to conciliate specific hardware needs, scalability and optimized costs.
+  - Administration of an AWS cloud infrastructure (EC2, S3, Lambda, DynamoDB, IAM, VPC, etc.) provisioned with Terraform.
+  - Implementation and deployment of several RESTful APIs in Python Flask to serverless AWS Lambda functions.
   - Development of custom tools and bots using Python and Docker to assist and check developers' work.
-  - Automation of the Product team release process and its integration into CI/CD pipelines, eliminating hours of manual work per release.
-  - Provisioning of AWS infrastructure (EKS cluster, EC2 workers, networking, etc.) with Terraform.
-  - Implementation and deployment of several RESTful APIs in Python Flask to serverless AWS Lambda functions using Terraform.
-  - Creation of tools to ensure compliance of user data processing with the European GDPR regulation.
+  - Automation and integration of the Product team release process into CI/CD pipelines, eliminating hours of manual work per release.
+  - Creation of an Airflow pipeline to make user data processing GDPR compliant.
   - Completion of *Kubernetes fundamentals*, *Advanced Kubernetes* and *Operate Kubernetes* training by [Enix](https://enix.io).
   - Work organization following agile Scrum & SAFe methods.
 
