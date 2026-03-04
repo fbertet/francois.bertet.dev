@@ -22,17 +22,17 @@ After running my homelab for quite some time on Raspberry Pis (See [previous art
 
 
 This article focuses on the major improvements, both regarding the hardware and the software:
-- Compute upgrade – Raspberry Pis → N100
+- Compute upgrade: Raspberry Pis → N100
 - Bare Metal → Virtualization using Proxmox
-- Kubernetes OS – Debian + K3S → Talos Linux
+- Kubernetes OS: Debian + K3S → Talos Linux
 - GitOps at every level, including to deploy the infrastructure
 - Deployment of new apps + improvements
 - Critical components moved outside of the Kubernetes cluster
 
-This refactoring also became the **main technical project** I worked on during my one‑year break (Sep 2024 – Dec 2025), giving me time to redesign the platform in depth. Also, to speed things up and explore new approaches, I started using LLMs (especially Claude by Anthropic) as an assistant for benchmarking and templating. It was very helpful, but it still requires a lot of vigilance and manual reviews, as it tends to hallucinate configuration options, especially for tools that are not widely used.
+This refactoring also became the **main technical project** I worked on during my one‑year break (Sep 2024 - Dec 2025), giving me time to redesign the platform in depth. Also, to speed things up and explore new approaches, I started using LLMs (especially Claude by Anthropic) as an assistant for benchmarking and templating. It was very helpful, but it still requires a lot of vigilance and manual reviews, as it tends to hallucinate configuration options, especially for tools that are not widely used.
 
 
-## Compute Upgrade – Pis → N100
+## Compute Upgrade: Pis → N100
 
 The first major change I made was **replacing the Raspberry Pi cluster with three mini computers** powered by an [Intel N100 Processor](https://www.intel.fr/content/www/fr/fr/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/specifications.html).
 
@@ -50,7 +50,7 @@ That additional compute power gave me the ability to run a hypervisor reliably a
 I also benefited from the x86_64 architecture since many Docker images are still not available or poorly supported on ARM.
 
 
-## Virtualization Layer - Proxmox
+## Virtualization Layer: Proxmox
 
 ### Why Virtualization?
 
@@ -75,7 +75,7 @@ Proxmox VE cluster across the 3 N100 nodes currently runs 4 VMs:
 - 3x `talos` virtual machines running *Talos Linux* OS (one per Proxmox node) that runs Kubernetes, configured using OpenTofu + Argo-CD (More information below).
 
 
-## Kubernetes OS - From Debian + K3S to Talos Linux
+## Kubernetes OS: From Debian + K3S to Talos Linux
 
 To further limit manual steps and configuration drift, I switched from Debian to [Talos Linux](https://www.talos.dev/) operating system.
 
@@ -97,7 +97,7 @@ Almost everything is managed via configuration files and Infrastructure as Code 
 
 At first, my goal was to instantiate the VMs, set up the Kubernetes cluster and deploy every Kubernetes system component (networking, storage, ...) using OpenTofu. Then ArgoCD would have been used for the Kubernetes apps deployment only.
 
-**Problem:** This is a [known issue](https://github.com/hashicorp/terraform-provider-kubernetes/issues/1782) about the `depends_on` feature of Kubernetes and Helm OpenTofu providers that is not working as expected with the `kubernetes_manifest` resource which is mandatory to use for CRDs kind of resources. The result was, despite explicit `depends_on` statements on the Proxmox and Talos resources that were responsible for creating the Kubernetes cluster, `tofu plan` gave errors about `kubernetes_manifest` resources because "the cluster does not exist"...
+**Problem:** It is a [known issue](https://github.com/hashicorp/terraform-provider-kubernetes/issues/1782) that the Kubernetes OpenTofu provider does not correctly handle dependencies when using the `kubernetes_manifest` resource. As a result, despite explicit `depends_on` statements on the Proxmox and Talos resources (which are responsible for creating the Kubernetes cluster), `tofu plan` failed because it attempted to deploy Kubernetes resources before the cluster was created 😅.
 
 This is why I finally dropped this idea and decided to keep OpenTofu for the infrastructure part but to deploy every Kubernetes resource (both system components and apps) using ArgoCD. But how? In fact, ArgoCD itself needs system components which leads to a "chicken and egg" problem 🥚🐔.
 
